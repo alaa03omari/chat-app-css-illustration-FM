@@ -1,0 +1,386 @@
+/* Font Link */
+/* Rubik */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+    /* #### Text */
+
+    /* (sub-heading at the top of the app UI) */
+    --PaleViolet: hsl(276, 100%, 81%);
+
+    /* (chat on the left) */
+    --ModerateViolet: hsl(276, 55%, 52%);
+
+    /* (chat on the right) */
+    --DesaturatedDarkViolet: hsl(271, 15%, 43%);
+
+    /* (placeholder text) */
+    --GrayishBlue: hsl(206, 6%, 79%);
+
+    /* (main heading) */
+    --VeryDarkDesaturatedViolet: hsl(271, 36%, 24%);
+
+    /* (paragraph) */
+    --DarkGrayishViolet: hsl(270, 7%, 64%);
+
+    /* #### Gradients */
+    --LightMagenta: hsl(293, 100%, 63%);
+    --LightViolet: hsl(264, 100%, 61%);
+
+    --White: hsl(0, 0%, 100%);
+
+    /* (app background) */
+    --LightGrayishViolet: hsl(270, 20%, 96%);
+
+    /* (submit button background) */
+    --VeryDarkDesaturatedViolet: hsl(271, 36%, 24%);
+
+    /* (radio button outline) */
+    --VeryLightMagenta: hsl(289, 100%, 72%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    min-height: 100vh;
+    position: relative;
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    background-color: var(--LightGrayishViolet);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-shape {
+    position: absolute;
+    width: 400px;
+    height: 1000px;
+    border-radius: 200px;
+    background: linear-gradient(var(--LightMagenta), var(--LightViolet));
+    z-index: -9999;
+    top: -306px;
+    left: -70px;
+}
+
+.right-shape {
+    position: absolute;
+    width: 400px;
+    height: 1000px;
+    border-radius: 200px;
+    background-color: #f2edf3ca;
+    z-index: -9999;
+    top: 25%;
+    right: -70px;
+}
+
+
+.section {
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin: 4rem 2rem;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.section .phone-container {
+    margin-left: 6rem;
+    padding: 10px;
+    min-width: 350px;
+    min-height: auto;
+    background-color: var(--White);
+    border-radius: 30px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    overflow: hidden;
+}
+
+.section .phone-container .phone-header {
+    position: relative;
+    background: linear-gradient(var(--LightMagenta), var(--LightViolet));
+    border-radius: 30px 30px 0 0;
+}
+
+.section .phone-container .phone-header .phone-notch {
+    position: absolute;
+    background: var(--White);
+    width: calc(100% - 90px);
+    padding: 15px;
+    border-radius: 30px;
+    top: 0;
+    right: 49%;
+    transform: translate(50%, -30%);
+}
+
+.section .phone-container .phone-header {
+    padding-block: 2em .7em;
+}
+
+.section .phone-container .phone-header .header {
+
+    padding-inline: 1em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--White);
+}
+
+.section .phone-container .phone-header .header .left-header {
+    width: 5;
+    display: flex;
+    gap: .4rem;
+    align-items: center;
+
+    img {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: solid var(--White);
+    }
+}
+
+.section .phone-container .phone-header .header .left-header .user-info {
+    display: flex;
+    flex-direction: column;
+
+    .userName {
+        font-weight: 700;
+    }
+
+    .userStatus {
+        color: #ffffff9c;
+        font-size: 12px;
+        margin-top: .3em;
+
+    }
+}
+
+.section .phone-container .phone-header .header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section .phone-container .phone-chat {
+    background-color: var(--LightGrayishViolet);
+    border-radius: 0 0 30px 30px;
+}
+
+.section .phone-container .phone-chat .messages {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem .7rem;
+    font-size: small;
+}
+
+.section .phone-container .phone-chat .messages .message1,
+.message2,
+.message6 {
+    width: 200px;
+    background-color: #EDE4F5;
+    padding: 10px;
+    border-radius: 15px 15px 15px 5px;
+    color: var(--ModerateViolet);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.section .phone-container .phone-chat .messages .message4,
+.message5 {
+
+    align-self: flex-end;
+    max-width: 200px;
+    background-color: var(--White);
+    padding: 10px;
+    border-radius: 15px 15px 5px 15px;
+    color: var(--DesaturatedDarkViolet);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.section .phone-container .phone-chat .messages .message3 {
+    align-self: flex-end;
+    width: fit-content;
+    border-radius: 15px 15px 5px 15px;
+    color: var(--ModerateViolet);
+
+}
+
+.section .phone-container .phone-chat .messages .message3 .dog-images img {
+    width: 60px;
+    border-radius: 10px;
+    margin-left: .4em;
+}
+
+.section .phone-container .phone-chat .messages .message7 {
+    width: 250px;
+    background: HSL(293, 100%, 63%);
+    background: linear-gradient(90deg, rgba(233, 66, 255, 1) 0%, rgba(136, 56, 255, 1) 100%);
+    padding: 10px;
+    border-radius: 15px 15px 15px 5px;
+    color: var(--LightGrayishViolet);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.section .phone-container .phone-chat .messages .message7 div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .circle {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: solid 1px var(--LightGrayishViolet);
+    }
+
+    .time-duration {
+        font-size: .9em;
+        margin-right: 5rem;
+        opacity: 90%;
+    }
+
+    .price {
+        font-size: 1.2em;
+        font-weight: 700;
+    }
+}
+
+.section .phone-container .phone-chat .messages .message8 {
+    width: 250px;
+    background: HSL(293, 100%, 63%);
+    background: linear-gradient(90deg, rgba(233, 66, 255, 1) 0%, rgba(136, 56, 255, 1) 100%);
+    padding: 10px;
+    border-radius: 15px 15px 15px 5px;
+    color: var(--LightGrayishViolet);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.section .phone-container .phone-chat .messages .message8 div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .circle {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: solid 1px var(--LightGrayishViolet);
+    }
+
+    .time-duration {
+        font-size: .9em;
+        margin-right: 6rem;
+        opacity: 90%;
+    }
+
+    .price {
+        font-size: 1.2em;
+        font-weight: 700;
+    }
+}
+
+.section .phone-container .phone-chat .messages .message-input {
+    width: 100%;
+    position: relative;
+}
+
+.section .phone-container .phone-chat .messages .message-input input[type=text] {
+    width: 100%;
+    border: none;
+    border-radius: 30px;
+    padding: .8em;
+}
+
+.section .phone-container .phone-chat .messages .message-input input[type=text]::placeholder {
+    color: var(--GrayishBlue);
+}
+
+.section .phone-container .phone-chat .messages .message-input input[type=text]:focus {
+    outline: none;
+    border: 2px var(--DarkGrayishViolet) solid;
+}
+
+.section .phone-container .phone-chat .messages .message-input i {
+    position: absolute;
+    background-color: var(--VeryDarkDesaturatedViolet);
+    color: var(--White);
+    width: 30px;
+    height: 30px;
+    padding: .8em;
+    text-align: center;
+    border-radius: 50%;
+    right: 5px;
+    top: 4px;
+}
+
+.section .section-content {
+    max-width: 450px;
+    margin-inline: 2rem;
+
+    h1 {
+        font-weight: 500;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        line-height: 1.8;
+        color: var(--DarkGrayishViolet);
+        width: calc(100% - 1em);
+    }
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (width<750px) {
+
+
+    .left-shape {
+        top: -55%;
+        left: -50%;
+    }
+
+    .right-shape {
+        top: 50%;
+        right: -50%;
+    }
+
+    .section {
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .section .phone-container {
+        margin: 2rem 0 0 0;
+    }
+
+    .section .section-content {
+        margin: 1rem;
+        width: 100%;
+        text-align: center;
+    }
+
+}
