@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 /* Font Link */
 /* Rubik */
 
@@ -41,6 +48,7 @@
 }
 
 * {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -56,9 +64,18 @@ body {
     font-family: 'Rubik', sans-serif;
     font-size: 16px;
     background-color: var(--LightGrayishViolet);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -67,6 +84,8 @@ body {
     width: 400px;
     height: 1000px;
     border-radius: 200px;
+    background: -webkit-gradient(linear, left top, left bottom, from(var(--LightMagenta)), to(var(--LightViolet)));
+    background: -o-linear-gradient(var(--LightMagenta), var(--LightViolet));
     background: linear-gradient(var(--LightMagenta), var(--LightViolet));
     z-index: -9999;
     top: -306px;
@@ -88,9 +107,15 @@ body {
 .section {
     width: 100%;
     height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin: 4rem 2rem;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
     justify-content: space-evenly;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 
 }
@@ -102,12 +127,15 @@ body {
     min-height: auto;
     background-color: var(--White);
     border-radius: 30px;
+    -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     overflow: hidden;
 }
 
 .section .phone-container .phone-header {
     position: relative;
+    background: -webkit-gradient(linear, left top, left bottom, from(var(--LightMagenta)), to(var(--LightViolet)));
+    background: -o-linear-gradient(var(--LightMagenta), var(--LightViolet));
     background: linear-gradient(var(--LightMagenta), var(--LightViolet));
     border-radius: 30px 30px 0 0;
 }
@@ -120,6 +148,8 @@ body {
     border-radius: 30px;
     top: 0;
     right: 49%;
+    -webkit-transform: translate(50%, -30%);
+    -ms-transform: translate(50%, -30%);
     transform: translate(50%, -30%);
 }
 
@@ -130,16 +160,25 @@ body {
 .section .phone-container .phone-header .header {
 
     padding-inline: 1em;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     color: var(--White);
 }
 
 .section .phone-container .phone-header .header .left-header {
     width: 5;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: .4rem;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 
     img {
@@ -151,7 +190,12 @@ body {
 }
 
 .section .phone-container .phone-header .header .left-header .user-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
 
     .userName {
@@ -168,8 +212,14 @@ body {
 
 .section .phone-container .phone-header .header {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -179,8 +229,15 @@ body {
 }
 
 .section .phone-container .phone-chat .messages {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
     gap: 1rem;
     padding: 1rem .7rem;
@@ -195,11 +252,14 @@ body {
     padding: 10px;
     border-radius: 15px 15px 15px 5px;
     color: var(--ModerateViolet);
+    -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .section .phone-container .phone-chat .messages .message4,
 .message5 {
+
+    -ms-flex-item-align: end;
 
     align-self: flex-end;
     max-width: 200px;
@@ -207,11 +267,15 @@ body {
     padding: 10px;
     border-radius: 15px 15px 5px 15px;
     color: var(--DesaturatedDarkViolet);
+    -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .section .phone-container .phone-chat .messages .message3 {
+    -ms-flex-item-align: end;
     align-self: flex-end;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     border-radius: 15px 15px 5px 15px;
     color: var(--ModerateViolet);
@@ -227,16 +291,25 @@ body {
 .section .phone-container .phone-chat .messages .message7 {
     width: 250px;
     background: HSL(293, 100%, 63%);
+    background: -webkit-gradient(linear, left top, right top, from(rgba(233, 66, 255, 1)), to(rgba(136, 56, 255, 1)));
+    background: -o-linear-gradient(left, rgba(233, 66, 255, 1) 0%, rgba(136, 56, 255, 1) 100%);
     background: linear-gradient(90deg, rgba(233, 66, 255, 1) 0%, rgba(136, 56, 255, 1) 100%);
     padding: 10px;
     border-radius: 15px 15px 15px 5px;
     color: var(--LightGrayishViolet);
+    -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .section .phone-container .phone-chat .messages .message7 div {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 
     .circle {
@@ -261,16 +334,25 @@ body {
 .section .phone-container .phone-chat .messages .message8 {
     width: 250px;
     background: HSL(293, 100%, 63%);
+    background: -webkit-gradient(linear, left top, right top, from(rgba(233, 66, 255, 1)), to(rgba(136, 56, 255, 1)));
+    background: -o-linear-gradient(left, rgba(233, 66, 255, 1) 0%, rgba(136, 56, 255, 1) 100%);
     background: linear-gradient(90deg, rgba(233, 66, 255, 1) 0%, rgba(136, 56, 255, 1) 100%);
     padding: 10px;
     border-radius: 15px 15px 15px 5px;
     color: var(--LightGrayishViolet);
+    -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .section .phone-container .phone-chat .messages .message8 div {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 
     .circle {
@@ -302,6 +384,22 @@ body {
     border: none;
     border-radius: 30px;
     padding: .8em;
+}
+
+.section .phone-container .phone-chat .messages .message-input input[type=text]::-webkit-input-placeholder {
+    color: var(--GrayishBlue);
+}
+
+.section .phone-container .phone-chat .messages .message-input input[type=text]::-moz-placeholder {
+    color: var(--GrayishBlue);
+}
+
+.section .phone-container .phone-chat .messages .message-input input[type=text]:-ms-input-placeholder {
+    color: var(--GrayishBlue);
+}
+
+.section .phone-container .phone-chat .messages .message-input input[type=text]::-ms-input-placeholder {
+    color: var(--GrayishBlue);
 }
 
 .section .phone-container .phone-chat .messages .message-input input[type=text]::placeholder {
@@ -366,9 +464,18 @@ body {
 
     .section {
         padding: 2rem;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-between;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
         gap: 2rem;
     }
